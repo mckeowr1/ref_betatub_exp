@@ -25,10 +25,10 @@ source activate decoy_transcripts
 
 bash scripts/generateDecoyTranscriptome.sh \
 -g "/vast/eande106/data/c_briggsae/genomes/QX1410_nanopore/Feb2020/c_briggsae.QX1410_nanopore.Feb2020.genome.fa" \
--t "data/proc/ref_transcriptomes/c_briggsae/c_briggsae.QX1410_nanopore.Feb2020.csq.filtered.gff3.fa" \
+-t "data/proc/ref_transcriptomes/c_briggsae/c_briggsae.QX1410_nanopore.Feb2020.csq.gff3.fa" \
 -b "$HOME/.conda/envs/decoy_transcripts/bin/bedtools" \
 -m "$HOME/.conda/envs/decoy_transcripts/bin/mashmap" \
 -a "/vast/eande106/data/c_briggsae/genomes/QX1410_nanopore/Feb2020/csq/c_briggsae.QX1410_nanopore.Feb2020.csq.gff3" \
--j 1 \
+-j 8 \
 -o "$out_dir"
 
